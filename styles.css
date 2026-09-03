@@ -350,6 +350,7 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
   background: #000;
   color: #f5f5f7;
 }
+.feature + .feature { margin-top: 1rem; }
 .feature-visual {
   min-height: 420px;
   display: flex;
@@ -407,6 +408,40 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
 }
 .product-shot img { width: 100%; height: 100%; display: block; object-fit: cover; }
 .product-shot-main { width: 100%; aspect-ratio: 1.02; margin-top: 2rem; transform: rotate(-1deg); }
+
+.fantamondiale-feature { background: #0b0f14; }
+.fantamondiale-visual {
+  position: relative;
+  isolation: isolate;
+  display: block;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(219, 170, 24, .22), transparent 34%),
+    radial-gradient(circle at 82% 88%, rgba(112, 78, 10, .18), transparent 40%),
+    #0b0f14;
+}
+.fantamondiale-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255,255,255,.022) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.022) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, #000, transparent 82%);
+}
+.fantamondiale-brand { position: relative; z-index: 3; width: 58px; }
+.fantamondiale-brand img { width: 100%; height: auto; display: block; }
+.fantamondiale-shot {
+  width: 100%;
+  aspect-ratio: 1.55;
+  margin-top: 1.75rem;
+  border-color: rgba(219, 170, 24, .34);
+  background: #10161d;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .5), 0 0 40px rgba(219, 170, 24, .1);
+  transform: rotate(.8deg);
+}
+.fantamondiale-feature .eyebrow { color: #e0b62f; }
+.fantamondiale-feature .feature-tech span { border-color: #3b3525; color: #d9d1bc; }
 
 .timeline { max-width: 940px; margin: 0 auto 2rem; }
 .timeline-item {
