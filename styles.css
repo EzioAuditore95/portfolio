@@ -395,6 +395,7 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
   position: relative;
   z-index: 3;
   width: min(180px, 42%);
+  margin-inline: auto;
 }
 .egamex-brand img { width: 100%; height: auto; display: block; }
 .product-shot {
@@ -413,7 +414,8 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
 .fantamondiale-visual {
   position: relative;
   isolation: isolate;
-  display: block;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   background:
     radial-gradient(circle at 18% 12%, rgba(219, 170, 24, .22), transparent 34%),
@@ -429,12 +431,10 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, #000, transparent 82%);
 }
-.fantamondiale-brand { position: relative; z-index: 3; width: 58px; }
-.fantamondiale-brand img { width: 100%; height: auto; display: block; }
 .fantamondiale-shot {
   width: 100%;
   aspect-ratio: 1.55;
-  margin-top: 1.75rem;
+  margin: 0;
   border-color: rgba(219, 170, 24, .34);
   background: #10161d;
   box-shadow: 0 24px 70px rgba(0, 0, 0, .5), 0 0 40px rgba(219, 170, 24, .1);
