@@ -365,8 +365,55 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
 .feature-copy { align-self: center; padding: clamp(2.5rem, 6vw, 5rem); }
 .feature-copy h2 { color: #f5f5f7; }
 .feature-copy p, .feature-copy ul { color: #a1a1a6; }
-.feature-copy ul { padding-left: 1.2rem; }
+.feature-copy ul { display: grid; gap: .65rem; padding-left: 1.2rem; }
 .feature-copy .button { color: #fff; }
+.feature-copy .actions { margin-top: 1.6rem; }
+.feature-tech { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: 1.6rem; }
+.feature-tech span { padding: .34rem .7rem; border: 1px solid #2f2f33; border-radius: 999px; color: #c7c7cc; font-size: 11px; }
+
+.egamex-visual {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 25% 18%, rgba(196, 71, 235, .34), transparent 34%),
+    radial-gradient(circle at 78% 82%, rgba(92, 53, 196, .28), transparent 36%),
+    #08050e;
+}
+.egamex-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, #000, transparent 78%);
+}
+.egamex-brand {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  gap: .55rem;
+  color: #fff;
+  font-size: 16px;
+  letter-spacing: .06em;
+}
+.egamex-symbol { color: #c54fea; font-size: 30px; font-weight: 300; line-height: 1; transform: rotate(45deg); }
+.product-shot {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(207, 108, 255, .3);
+  border-radius: 18px;
+  background: #08050e;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .55), 0 0 45px rgba(164, 66, 230, .15);
+}
+.product-shot img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.product-shot-main { width: 88%; aspect-ratio: 1.02; top: 17%; left: 8%; transform: rotate(-1.8deg); }
+.product-shot-secondary { width: 64%; aspect-ratio: 16 / 9; right: 4%; bottom: 7%; z-index: 2; transform: rotate(2.4deg); }
 
 .timeline { max-width: 940px; margin: 0 auto 2rem; }
 .timeline-item {
