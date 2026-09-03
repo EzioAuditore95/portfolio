@@ -374,6 +374,7 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
 .egamex-visual {
   position: relative;
   isolation: isolate;
+  display: block;
   overflow: hidden;
   background:
     radial-gradient(circle at 25% 18%, rgba(196, 71, 235, .34), transparent 34%),
@@ -390,15 +391,13 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
   mask-image: linear-gradient(to bottom, #000, transparent 78%);
 }
 .egamex-brand {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  position: relative;
   z-index: 3;
   width: min(180px, 42%);
 }
 .egamex-brand img { width: 100%; height: auto; display: block; }
 .product-shot {
-  position: absolute;
+  position: relative;
   margin: 0;
   overflow: hidden;
   border: 1px solid rgba(207, 108, 255, .3);
@@ -407,7 +406,7 @@ section:nth-of-type(even) .card { background: var(--surface-soft); }
   box-shadow: 0 24px 70px rgba(0, 0, 0, .55), 0 0 45px rgba(164, 66, 230, .15);
 }
 .product-shot img { width: 100%; height: 100%; display: block; object-fit: cover; }
-.product-shot-main { width: 90%; aspect-ratio: 1.02; top: 17%; left: 5%; transform: rotate(-1deg); }
+.product-shot-main { width: 100%; aspect-ratio: 1.02; margin-top: 2rem; transform: rotate(-1deg); }
 
 .timeline { max-width: 940px; margin: 0 auto 2rem; }
 .timeline-item {
